@@ -5,13 +5,14 @@
 # demog
 
 <!-- badges: start -->
+[![Travis](https://travis-ci.org/kjhealy/demog.svg?branch=master)](https://travis-ci.org/kjhealy/demog)
 <!-- badges: end -->
 
 Some demographic data
 
 ## Installation
 
-`demog` is a data package.
+`demog` is a data package. 
 
 ### Install direct from GitHub
 
