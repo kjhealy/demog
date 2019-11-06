@@ -15,6 +15,7 @@
 #' @keywords datasets
 #' @name britain
 #' @source mortality.org
+'britain'
 
 
 #' Mortality rates in France
@@ -34,6 +35,7 @@
 #' @keywords datasets
 #' @name france
 #' @source mortality.org
+'france'
 
 #' Mortality rates in Ireland
 #'
@@ -52,6 +54,7 @@
 #' @keywords datasets
 #' @name ireland
 #' @source mortality.org
+'ireland'
 
 #' Mortality rates in New Zealand
 #'
@@ -70,6 +73,7 @@
 #' @keywords datasets
 #' @name nzl
 #' @source mortality.org
+'nzl'
 
 #' Mortality rates in japan
 #'
@@ -88,7 +92,7 @@
 #' @keywords datasets
 #' @name japan
 #' @source mortality.org
-
+'japan'
 
 #' Mortality rates in Sweden
 #'
@@ -107,6 +111,7 @@
 #' @keywords datasets
 #' @name sweden
 #' @source mortality.org
+'sweden'
 
 #' Birth rates in the US and England/Wales
 #'
@@ -128,3 +133,4 @@
 #' @keywords datasets
 #' @name okboomer
 #' @source mortality.org
+'okboomer'
