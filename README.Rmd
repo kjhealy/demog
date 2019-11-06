@@ -22,7 +22,7 @@ Some demographic data
 
 ## Installation
 
-`demog` is a data package.
+`demog` is a data package. 
 
 ### Install direct from GitHub
 
