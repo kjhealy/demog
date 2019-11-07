@@ -123,9 +123,10 @@
 #' \item{\code{month}}{Month}
 #' \item{\code{n_days}}{N days in month}
 #' \item{\code{births}}{N births}
-#' \item{\code{total_pop}}{Population}
-#' \item{\code{births_pct}}{Birth rate}
-#' \item{\code{births_pct_day}}{Average daily births this month}
+#' \item{\code{total_pop}}{National Population}
+#' \item{\code{births_pct}}{N births / National Population}
+#' \item{\code{births_pct_day}}{Average number of births per million
+#'     people per day, for the observed month}
 #' \item{\code{date}}{Date}
 #' }
 #'

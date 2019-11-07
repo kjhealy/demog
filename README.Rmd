@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Travis](https://travis-ci.org/kjhealy/demog.svg?branch=master)](https://travis-ci.org/kjhealy/demog)
 <!-- badges: end -->
 
-Some demographic data
+Some demographic data, for teaching purposes. Please do not distribute this package. For the original mortality data, consult <http://mortality.org> and follow the instructions there.
 
 ## Installation
 
