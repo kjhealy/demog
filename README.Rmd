@@ -91,7 +91,7 @@ britain
 ## Example
 
 
-```{r example, fig.height = 9, fig.width = 10}
+```{r example, fig.height = 9, fig.width = 10, dpi = 300}
 library(dplyr)
 library(ggplot2)
 
@@ -107,7 +107,8 @@ britain %>%
          title = "Male Mortality Rates in England and Wales, 1841-2016",
          subtitle = "Binned by percentile",
          caption = "@kjhealy / http://socviz.co. Data: Human Mortality Database.") +
+    theme_minimal()  + 
     theme(legend.position = "top",
-          legend.title = element_text(size = 8))
+          legend.title = element_text(size = 8)) 
 
 ```

@@ -118,8 +118,9 @@ britain %>%
          title = "Male Mortality Rates in England and Wales, 1841-2016",
          subtitle = "Binned by percentile",
          caption = "@kjhealy / http://socviz.co. Data: Human Mortality Database.") +
+    theme_minimal()  + 
     theme(legend.position = "top",
-          legend.title = element_text(size = 8))
+          legend.title = element_text(size = 8)) 
 ```
 
 <img src="man/figures/README-example-1.png" title="plot of chunk example" alt="plot of chunk example" width="100%" />
