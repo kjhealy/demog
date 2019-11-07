@@ -4,7 +4,7 @@
 \name{britain}
 \alias{britain}
 \title{Mortality rates in Britain}
-\format{A tibble
+\format{A tibble with 19,536 rows and 5 columns
 \describe{
 \item{\code{year}}{Year}
 \item{\code{age}}{Age}
@@ -19,6 +19,6 @@ mortality.org
 britain
 }
 \description{
-Mortality rates in Britain
+Mortality rates in Britain 1841-2016
 }
 \keyword{datasets}

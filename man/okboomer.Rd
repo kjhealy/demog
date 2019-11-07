@@ -3,7 +3,7 @@
 \docType{data}
 \name{okboomer}
 \alias{okboomer}
-\title{Birth rates in the US and England/Wales}
+\title{Birth rates in the US and England/Wales 1938-2015}
 \format{A tibble
 \describe{
 \item{\code{year}}{Year}
@@ -16,12 +16,12 @@
 \item{\code{date}}{Date}
 }}
 \source{
-mortality.org
+US Census Bureau and UK ONS
 }
 \usage{
 okboomer
 }
 \description{
-Birth rates in the US and England/Wales
+Birth rates in the US and England/Wales 1938-2015
 }
 \keyword{datasets}

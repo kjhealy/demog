@@ -3,8 +3,8 @@
 \docType{data}
 \name{nzl}
 \alias{nzl}
-\title{Mortality rates in New Zealand}
-\format{A tibble
+\title{Mortality rates in New Zealand 1901-2008}
+\format{A tibble with 11,988 rows and 5 columns
 \describe{
 \item{\code{year}}{Year}
 \item{\code{age}}{Age}
@@ -19,6 +19,6 @@ mortality.org
 nzl
 }
 \description{
-Mortality rates in New Zealand
+Mortality rates in New Zealand 1901-2008
 }
 \keyword{datasets}

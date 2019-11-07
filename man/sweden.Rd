@@ -4,7 +4,7 @@
 \name{sweden}
 \alias{sweden}
 \title{Mortality rates in Sweden}
-\format{A tibble
+\format{A tibble with 29,526 rows and 5 columns
 \describe{
 \item{\code{year}}{Year}
 \item{\code{age}}{Age}

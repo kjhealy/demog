@@ -1,8 +1,8 @@
 #' Mortality rates in Britain
 #'
-#' Mortality rates in Britain
+#' Mortality rates in Britain 1841-2016
 #' 
-#' @format A tibble
+#' @format A tibble with 19,536 rows and 5 columns
 #' \describe{
 #' \item{\code{year}}{Year}
 #' \item{\code{age}}{Age}
@@ -18,11 +18,11 @@
 'britain'
 
 
-#' Mortality rates in France
+#' Mortality rates in France 1816-2016
 #'
-#' Mortality rates in France
+#' Mortality rates in France 1816-2016
 #' 
-#' @format A tibble
+#' @format A tibble with 22,311 rows and 5 columns
 #' \describe{
 #' \item{\code{year}}{Year}
 #' \item{\code{age}}{Age}
@@ -37,11 +37,11 @@
 #' @source mortality.org
 'france'
 
-#' Mortality rates in Ireland
+#' Mortality rates in Ireland 1950-2014
 #'
-#' Mortality rates in Ireland
+#' Mortality rates in Ireland 1950-2014
 #' 
-#' @format A tibble
+#' @format A tibble with 7,215 rows and 5 columns
 #' \describe{
 #' \item{\code{year}}{Year}
 #' \item{\code{age}}{Age}
@@ -56,11 +56,11 @@
 #' @source mortality.org
 'ireland'
 
-#' Mortality rates in New Zealand
+#' Mortality rates in New Zealand 1901-2008
 #'
-#' Mortality rates in New Zealand
+#' Mortality rates in New Zealand 1901-2008
 #' 
-#' @format A tibble
+#' @format A tibble with 11,988 rows and 5 columns
 #' \describe{
 #' \item{\code{year}}{Year}
 #' \item{\code{age}}{Age}
@@ -75,11 +75,11 @@
 #' @source mortality.org
 'nzl'
 
-#' Mortality rates in japan
+#' Mortality rates in Japan 1947-2016
 #'
-#' Mortality rates in japan
+#' Mortality rates in Japan 1947-2016
 #' 
-#' @format A tibble
+#' @format A tibble with 7,770 rows and 5 columns
 #' \describe{
 #' \item{\code{year}}{Year}
 #' \item{\code{age}}{Age}
@@ -98,7 +98,7 @@
 #'
 #' Mortality rates in Sweden
 #' 
-#' @format A tibble
+#' @format A tibble with 29,526 rows and 5 columns
 #' \describe{
 #' \item{\code{year}}{Year}
 #' \item{\code{age}}{Age}
@@ -113,9 +113,9 @@
 #' @source mortality.org
 'sweden'
 
-#' Birth rates in the US and England/Wales
+#' Birth rates in the US and England/Wales 1938-2015
 #'
-#' Birth rates in the US and England/Wales
+#' Birth rates in the US and England/Wales 1938-2015
 #' 
 #' @format A tibble
 #' \describe{
@@ -132,5 +132,5 @@
 #' @docType data
 #' @keywords datasets
 #' @name okboomer
-#' @source mortality.org
+#' @source US Census Bureau and UK ONS
 'okboomer'

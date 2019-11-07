@@ -3,8 +3,8 @@
 \docType{data}
 \name{japan}
 \alias{japan}
-\title{Mortality rates in japan}
-\format{A tibble
+\title{Mortality rates in Japan 1947-2016}
+\format{A tibble with 7,770 rows and 5 columns
 \describe{
 \item{\code{year}}{Year}
 \item{\code{age}}{Age}
@@ -19,6 +19,6 @@ mortality.org
 japan
 }
 \description{
-Mortality rates in japan
+Mortality rates in Japan 1947-2016
 }
 \keyword{datasets}

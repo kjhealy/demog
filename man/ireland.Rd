@@ -3,8 +3,8 @@
 \docType{data}
 \name{ireland}
 \alias{ireland}
-\title{Mortality rates in Ireland}
-\format{A tibble
+\title{Mortality rates in Ireland 1950-2014}
+\format{A tibble with 7,215 rows and 5 columns
 \describe{
 \item{\code{year}}{Year}
 \item{\code{age}}{Age}
@@ -19,6 +19,6 @@ mortality.org
 ireland
 }
 \description{
-Mortality rates in Ireland
+Mortality rates in Ireland 1950-2014
 }
 \keyword{datasets}

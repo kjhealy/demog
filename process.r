@@ -12,12 +12,12 @@ britain$age <- as.integer(recode(britain$age, "110+" = "110"))
 ##                               pct_diff = ((male - female) / (male + female))*100,
 ##                               bin_ratio = ntile(ratio, 100))
 
-save(britain, file = "data/britain.rda")
+save(britain, file = "data/britain.rda", compress = "xz")
 
 france <- read_table(paste0(path, "FRATNP.Mx_1x1.txt"), skip = 2, na = ".") %>% clean_names()
 france$age <- as.integer(recode(france$age, "110+" = "110"))
 
-save(france, file = "data/france.rda")
+save(france, file = "data/france.rda", compress = "xz")
 
 
 ## france <- france %>% mutate(ratio = male / female,
@@ -28,7 +28,7 @@ save(france, file = "data/france.rda")
 ireland <- read_table(paste0(path, "IRL.Mx_1x1.txt"), skip = 2, na = ".") %>% clean_names()
 ireland$age <- as.integer(recode(ireland$age, "110+" = "110"))
 
-save(ireland, file = "data/ireland.rda")
+save(ireland, file = "data/ireland.rda", compress = "xz")
 
 ## ireland <- ireland %>% mutate(ratio = male / female,
 ##                               deciles = cut(ratio, breaks = quantile(ratio, probs = seq(0, 1, 0.1), na.rm = TRUE)),
@@ -43,25 +43,22 @@ nzl$age <- as.integer(recode(nzl$age, "110+" = "110"))
 ##                               pct_diff = ((male - female) / (male + female))*100,
 ##                               bin_ratio = ntile(ratio, 100))
 
-save(nzl, file = "data/nzl.rda")
+save(nzl, file = "data/nzl.rda", compress = "xz")
 
 japan <- read_table(paste0(path, "JPN.Mx_1x1.txt"), skip = 2, na = ".") %>% clean_names()
 japan$age <- as.integer(recode(japan$age, "110+" = "110"))
 
-save(japan, file = "data/japan.rda")
+save(japan, file = "data/japan.rda", compress = "xz")
 
 
 sweden <- read_table(paste0(path, "SWE.Mx_1x1.txt"), skip = 2, na = ".") %>% clean_names()
 sweden$age <- as.integer(recode(sweden$age, "110+" = "110"))
 
-save(sweden, file = "data/sweden.rda")
-
-
-
+save(sweden, file = "data/sweden.rda", compress = "xz")
 
 okboomer <- read_csv("rawdata/boom_births.csv")
 
-save(okboomer, file = "data/okboomer.rda")
+save(okboomer, file = "data/okboomer.rda", compress = "xz")
 
 start_date <- "1938-01-01"
 end_date <- "1991-12-01"
