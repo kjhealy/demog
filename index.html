@@ -109,43 +109,59 @@
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tidyverse)</a></code></pre></div>
 <p>Load the data:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(demog)</a></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">britain</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="co">#&gt; # A tibble: 19,536 x 5</span></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="co">#&gt;     year   age  female    male   total</span></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="co">#&gt;    &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="co">#&gt;  1  1841     0 0.136   0.169   0.153  </span></a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#&gt;  2  1841     1 0.0596  0.0632  0.0614 </span></a>
-<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt;  3  1841     2 0.0364  0.0370  0.0367 </span></a>
-<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt;  4  1841     3 0.0249  0.0261  0.0255 </span></a>
-<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt;  5  1841     4 0.0185  0.0191  0.0188 </span></a>
-<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt;  6  1841     5 0.0140  0.0143  0.0141 </span></a>
-<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;  7  1841     6 0.0109  0.0112  0.0110 </span></a>
-<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt;  8  1841     7 0.00859 0.00898 0.00879</span></a>
-<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt;  9  1841     8 0.00686 0.00725 0.00705</span></a>
-<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt; 10  1841     9 0.00577 0.00605 0.00591</span></a>
-<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt; # … with 19,526 more rows</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">okboomer</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1,644 x 12</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="co">#&gt;     year month n_days births total_pop births_pct births_pct_day date      </span></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="co">#&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;          &lt;dbl&gt; &lt;date&gt;    </span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="co">#&gt;  1  1938     1     31  51820  41215000    0.00126           40.6 1938-01-01</span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#&gt;  2  1938     2     28  47421  41215000    0.00115           41.1 1938-02-01</span></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt;  3  1938     3     31  54887  41215000    0.00133           43.0 1938-03-01</span></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt;  4  1938     4     30  54623  41215000    0.00133           44.2 1938-04-01</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt;  5  1938     5     31  56853  41215000    0.00138           44.5 1938-05-01</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt;  6  1938     6     30  53145  41215000    0.00129           43.0 1938-06-01</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;  7  1938     7     31  53214  41215000    0.00129           41.6 1938-07-01</span></a>
+<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt;  8  1938     8     31  50444  41215000    0.00122           39.5 1938-08-01</span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt;  9  1938     9     30  50545  41215000    0.00123           40.9 1938-09-01</span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt; 10  1938    10     31  50079  41215000    0.00122           39.2 1938-10-01</span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt; # … with 1,634 more rows, and 4 more variables: seasonal &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt; #   trend &lt;dbl&gt;, remainder &lt;dbl&gt;, country &lt;chr&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">britain</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co">#&gt; # A tibble: 19,536 x 5</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#&gt;     year   age  female    male   total</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt;    &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt;  1  1841     0 0.136   0.169   0.153  </span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt;  2  1841     1 0.0596  0.0632  0.0614 </span></a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="co">#&gt;  3  1841     2 0.0364  0.0370  0.0367 </span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="co">#&gt;  4  1841     3 0.0249  0.0261  0.0255 </span></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="co">#&gt;  5  1841     4 0.0185  0.0191  0.0188 </span></a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="co">#&gt;  6  1841     5 0.0140  0.0143  0.0141 </span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="co">#&gt;  7  1841     6 0.0109  0.0112  0.0110 </span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="co">#&gt;  8  1841     7 0.00859 0.00898 0.00879</span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="co">#&gt;  9  1841     8 0.00686 0.00725 0.00705</span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="co">#&gt; 10  1841     9 0.00577 0.00605 0.00591</span></a>
+<a class="sourceLine" id="cb9-15" data-line-number="15"><span class="co">#&gt; # … with 19,526 more rows</span></a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggplot2)</a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb9-4" data-line-number="4">britain <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="st">    </span><span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(age <span class="op">&lt;</span><span class="st"> </span><span class="dv">101</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> age, <span class="dt">fill =</span> <span class="kw">ntile</span>(male, <span class="dv">100</span>))) <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="st">    </span><span class="kw">geom_raster</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="st">    </span><span class="kw">scale_fill_viridis_c</span>(<span class="dt">option =</span> <span class="st">"A"</span>, <span class="dt">direction =</span> <span class="dv">-1</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="dv">1845</span>, <span class="dv">2015</span>, <span class="dt">by =</span> <span class="dv">15</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="st">    </span><span class="kw"><a href="https://rdrr.io/r/graphics/plot.window.html">ylim</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">0</span>, <span class="dv">100</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="st">        </span><span class="kw">guides</span>(<span class="dt">fill =</span> <span class="kw">guide_legend</span>(<span class="dt">nrow =</span> <span class="dv">1</span>, <span class="dt">title.position =</span> <span class="st">"top"</span>, <span class="dt">label.position =</span> <span class="st">"bottom"</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="st">    </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">"Year"</span>, <span class="dt">y =</span> <span class="st">"Age"</span>, <span class="dt">fill =</span> <span class="st">"Male Death Rate Percentile"</span>,</a>
-<a class="sourceLine" id="cb9-13" data-line-number="13">         <span class="dt">title =</span> <span class="st">"Male Mortality Rates in England and Wales, 1841-2016"</span>,</a>
-<a class="sourceLine" id="cb9-14" data-line-number="14">         <span class="dt">subtitle =</span> <span class="st">"Binned by percentile"</span>,</a>
-<a class="sourceLine" id="cb9-15" data-line-number="15">         <span class="dt">caption =</span> <span class="st">"@kjhealy / http://socviz.co. Data: Human Mortality Database."</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-16" data-line-number="16"><span class="st">    </span><span class="kw">theme_minimal</span>()  <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb9-17" data-line-number="17"><span class="st">    </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"top"</span>,</a>
-<a class="sourceLine" id="cb9-18" data-line-number="18">          <span class="dt">legend.title =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">8</span>)) </a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggplot2)</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4">britain <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="st">    </span><span class="kw"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span>(age <span class="op">&lt;</span><span class="st"> </span><span class="dv">101</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> age, <span class="dt">fill =</span> <span class="kw">ntile</span>(male, <span class="dv">100</span>))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="st">    </span><span class="kw">geom_raster</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="st">    </span><span class="kw">scale_fill_viridis_c</span>(<span class="dt">option =</span> <span class="st">"A"</span>, <span class="dt">direction =</span> <span class="dv">-1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="dv">1845</span>, <span class="dv">2015</span>, <span class="dt">by =</span> <span class="dv">15</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="st">    </span><span class="kw"><a href="https://rdrr.io/r/graphics/plot.window.html">ylim</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">0</span>, <span class="dv">100</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="st">        </span><span class="kw">guides</span>(<span class="dt">fill =</span> <span class="kw">guide_legend</span>(<span class="dt">nrow =</span> <span class="dv">1</span>, <span class="dt">title.position =</span> <span class="st">"top"</span>, <span class="dt">label.position =</span> <span class="st">"bottom"</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="st">    </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">"Year"</span>, <span class="dt">y =</span> <span class="st">"Age"</span>, <span class="dt">fill =</span> <span class="st">"Male Death Rate Percentile"</span>,</a>
+<a class="sourceLine" id="cb10-13" data-line-number="13">         <span class="dt">title =</span> <span class="st">"Male Mortality Rates in England and Wales, 1841-2016"</span>,</a>
+<a class="sourceLine" id="cb10-14" data-line-number="14">         <span class="dt">subtitle =</span> <span class="st">"Binned by percentile"</span>,</a>
+<a class="sourceLine" id="cb10-15" data-line-number="15">         <span class="dt">caption =</span> <span class="st">"@kjhealy / http://socviz.co. Data: Human Mortality Database."</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb10-16" data-line-number="16"><span class="st">    </span><span class="kw">theme_minimal</span>()  <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb10-17" data-line-number="17"><span class="st">    </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">"top"</span>,</a>
+<a class="sourceLine" id="cb10-18" data-line-number="18">          <span class="dt">legend.title =</span> <span class="kw">element_text</span>(<span class="dt">size =</span> <span class="dv">8</span>)) </a></code></pre></div>
 <p><img src="reference/figures/README-example-1.png" title="plot of chunk example" alt="plot of chunk example" width="100%"></p>
 </div>
 </div>
