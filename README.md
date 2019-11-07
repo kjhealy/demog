@@ -102,3 +102,24 @@ britain
 
 
 
+```r
+library(dplyr)
+library(ggplot2)
+
+britain %>%
+    filter(age < 101) %>%
+    ggplot(aes(x = year, y = age, fill = ntile(male, 100))) +
+    geom_raster() +
+    scale_fill_viridis_c(option = "A", direction = -1) +
+    scale_x_continuous(breaks = seq(1845, 2015, by = 15)) +
+    ylim(c(0, 100)) +
+        guides(fill = guide_legend(nrow = 1, title.position = "top", label.position = "bottom")) +
+    labs(x = "Year", y = "Age", fill = "Male Death Rate Percentile",
+         title = "Male Mortality Rates in England and Wales, 1841-2016",
+         subtitle = "Binned by percentile",
+         caption = "@kjhealy / http://socviz.co. Data: Human Mortality Database.") +
+    theme(legend.position = "top",
+          legend.title = element_text(size = 8))
+```
+
+<img src="man/figures/README-example-1.png" title="plot of chunk example" alt="plot of chunk example" width="100%" />
