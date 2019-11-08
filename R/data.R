@@ -1,3 +1,25 @@
+#' Mortality rates for 47 countries or sub-populations, various years
+#'
+#' Mortality rates for 47 countries or sub-populations, various years
+#' 
+#' @format A tibble with 47 rows and 3 columns
+#' \describe{
+#' \item{\code{country}}{Country name. This includes sub-units such as
+#'     the NZ Maori population.}
+#' \item{\code{ccode}}{Country or unit code}
+#' \item{\code{data}}{A list column containing the data for that
+#'     country. Consists of five columns: year, age, female, male, and
+#'     total, with the latter three being estimated mortality rates
+#'     for the year and age combination.}
+#' }
+#'
+#' @docType data
+#' @keywords datasets
+#' @name country_data
+#' @source mortality.org
+'mortality'
+
+
 #' Mortality rates in Britain
 #'
 #' Mortality rates in Britain 1841-2016
