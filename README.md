@@ -144,3 +144,7 @@ britain %>%
 ```
 
 <img src="man/figures/README-example-1.png" title="plot of chunk example" alt="plot of chunk example" width="100%" />
+
+
+
+
